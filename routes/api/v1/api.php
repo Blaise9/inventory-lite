@@ -30,6 +30,8 @@ route::group(['middleware' => 'auth:sanctum'], function () {
     Route::post('/logout', [\App\Http\Controllers\Auth\LogoutController::class, 'logout']);
 
     Route::get('/dashboard/data', [\App\Http\Controllers\DashboardController::class, 'index']);
+    Route::get('/dashboard/data-2', [\App\Http\Controllers\DashboardController::class, 'index']);
+
 
     Route::group(['prefix' => 'toselect'], function () {
         Route::get('/basicquantities', [\App\Http\Controllers\BasicSellingQuantityController::class, 'toselect']);
